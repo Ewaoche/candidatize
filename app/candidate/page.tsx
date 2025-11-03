@@ -1,22 +1,10 @@
 "use client"
-
-import { useRouter } from "next/navigation"
-import { useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
-export default function Home() {
-  const router = useRouter()
-
-  useEffect(() => {
-    const token = localStorage.getItem("token")
-    if (token) {
-      router.push("/dashboard")
-    }
-  }, [router])
-
+export default function CandidateHomePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -27,8 +15,8 @@ export default function Home() {
             <Link href="/candidate/register">
               <Button variant="ghost">Register</Button>
             </Link>
-            <Link href="/login">
-              <Button variant="outline">Admin Login</Button>
+            <Link href="/candidate/results">
+              <Button variant="outline">View Results</Button>
             </Link>
           </nav>
         </div>
@@ -36,7 +24,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="max-w-6xl mx-auto px-4 py-20 text-center">
-        <h2 className="text-5xl font-bold text-foreground mb-6 leading-tight">
+        <h2 className="text-5xl font-bold text-foreground mb-6">
           Assess Your Skills,
           <br />
           Find Your Perfect Fit
@@ -66,7 +54,7 @@ export default function Home() {
               {
                 step: "02",
                 title: "Add Your Skills",
-                description: "List your technical skills and rate your proficiency level on a scale of 0–10.",
+                description: "List your technical skills and rate your proficiency level on a scale of 0-10.",
               },
               {
                 step: "03",
