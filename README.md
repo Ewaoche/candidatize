@@ -1,5 +1,8 @@
 # Candidate Categorization Platform - Frontend
 
+
+## DEMO URL  https://candidatize.vercel.app/
+
 ## Overview
 
 This is the Next.js frontend application for the Candidate Categorization Platform. It provides both admin and candidate interfaces for managing candidate registrations, skill assessments, and tier categorizations.
@@ -19,7 +22,7 @@ This is the Next.js frontend application for the Candidate Categorization Platfo
 ### Prerequisites
 
 - Node.js 18+ and npm 9+
-- Backend API running on `http://localhost:3001/api`
+- Backend API running on `http://localhost:3000/api/v1`
 
 ### Installation & Setup (5 minutes)
 
@@ -28,7 +31,7 @@ This is the Next.js frontend application for the Candidate Categorization Platfo
 npm install
 
 # 2. Create environment file
-cp .env.example .env.local
+cp .env.example 
 
 # 3. Start development server
 npm run dev
@@ -39,10 +42,10 @@ npm run dev
 
 ### Environment Configuration
 
-Create `.env.local` with:
+Create `.env` with:
 
 \`\`\`env
-NEXT_PUBLIC_API_URL=http://localhost:3001/api
+NEXT_PUBLIC_API_URL=http://localhost:3000/api/v1
 NEXT_PUBLIC_API_TIMEOUT=10000
 \`\`\`
 
