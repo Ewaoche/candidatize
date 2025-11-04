@@ -110,7 +110,6 @@ function ChartTooltipContent({
   indicator = 'dot',
   hideLabel = false,
   hideIndicator = false,
-  label,
   labelFormatter,
   labelClassName,
   formatter,
